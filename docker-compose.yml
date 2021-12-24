@@ -1,0 +1,16 @@
+version: '3.5'
+services:
+# springboot
+  springboot:
+    image: lucianoromero/apimicroservicemoeda:latest
+    ports:
+      - "8080:8080"
+    restart: always  
+    networks: # Networks to join (Services on the same network can communicate with each other using their name)
+      - localhostm
+    container_name: apimicroservicemoeda
+
+
+# Networks to be created to facilitate communication between containers
+networks:
+  localhostm:
