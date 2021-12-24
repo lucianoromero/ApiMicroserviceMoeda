@@ -1,7 +1,9 @@
 package br.com.moedas.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
+@JsonSerialize(include=JsonSerialize.Inclusion.NON_NULL)
 public class ResponseDTO {
 
 	@JsonProperty("STATUS")
